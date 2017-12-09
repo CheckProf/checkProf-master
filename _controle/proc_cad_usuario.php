@@ -8,6 +8,7 @@ $usuario 			= $_POST["usuario"];
 $senha 				= $_POST["senha"];
 $nivel_de_acesso 	= $_POST["nivel_de_acesso"];
 
+
 if(mysqli_num_rows(mysqli_query($conectar, "SELECT * FROM usuarios WHERE email = '$email'")) != 0){
 	echo "<script>alert('E-mail já cadastrado.'); history.back();</script>"; 
 }else if(mysqli_num_rows(mysqli_query($conectar, "SELECT * FROM usuarios WHERE login = '$usuario'")) != 0){

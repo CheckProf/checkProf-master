@@ -8,6 +8,7 @@ $email 				= $_POST["email"];
 $usuario 			= $_POST["usuario"];
 $senha 				= $_POST["senha"];
 $nivel_de_acesso 	= $_POST["nivel_de_acesso"];
+
 $query = mysqli_query($conectar, "UPDATE usuarios set nome ='$nome', email = '$email', login = '$usuario', senha = '$senha', nivel_acesso_id = '$nivel_de_acesso', modified = NOW() WHERE id='$id'");
 ?>
 <!DOCTYPE html>

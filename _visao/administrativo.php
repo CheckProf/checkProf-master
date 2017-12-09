@@ -28,14 +28,17 @@ include_once("../_controle/conexao.php");
 			$link = $_GET["link"];
 			
 			$pag[1] = "bem_vindo.php";
+
 			$pag[2] = "listar_usuario.php";
 			$pag[3] = "cad_usuario.php";
-			$pag[4] = "editar_usuario.php";		
+			$pag[4] = "editar_usuario.php";
 			$pag[5] = "visual_usuario.php";
-			$pag[6] = "listar_professor.php";
-			$pag[7] = "cad_professor.php";
-			$pag[8] = "visual_professor.php";
-			$pag[9] = "editar_professor.php";
+
+			$pag[6] = "prof/listar_professor.php"; // 2
+			$pag[7] = "prof/cad_professor.php"; // 3
+			$pag[8] = "prof/visual_professor.php"; // 5
+			$pag[9] = "prof/editar_professor.php"; // 4
+
 			$pag[10] = "listar_recurso.php";
 			$pag[11] = "cad_recurso.php";
 			$pag[12] = "visual_recurso.php";
