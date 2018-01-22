@@ -15,8 +15,10 @@ include_once("../_controle/conexao.php");
     <title>Administrativo</title>
     <link href="../_complementos/css/bootstrap.min.css" rel="stylesheet">
     <link href="../_complementos/css/bootstra-p-theme.mim.css" rel="stylesheet">
-    <link href="../_complementos/css/theme.css" rel="stylesheet">
+     <link href="../_complementos/css/theme.css" rel="stylesheet">
+     <script src="../_complementos/js/jquery.min.js"></script>
     <script src="../_complementos/js/ie-emulation-modes-warning.js"></script>
+    <script src="../_complementos/js/validator.js"></script>
   </head>
 
   <body role="document">
@@ -66,7 +68,7 @@ include_once("../_controle/conexao.php");
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../_complementos/js/jquery.min.js"></script>
+    
     <script src="../_complementos/js/bootstrap.min.js"></script>
     <script src="../_complementos/js/docs.min.js"></script>
 	<script src="../_complementos/js/ckeditor/ckeditor.js"></script>

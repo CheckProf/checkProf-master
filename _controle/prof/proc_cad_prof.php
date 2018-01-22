@@ -19,11 +19,11 @@ if(mysqli_num_rows(mysqli_query($conectar, "SELECT * FROM usuarios WHERE email =
 	echo "<script>alert('E-mail já cadastrado.'); history.back();</script>";
 }else{
 	
-	$query = mysqli_query($conectar, "INSERT INTO professor (nome, matricula, data_nat, sexo, fone, email, graduacao) VALUES ('$nome', '$matricula', $data_nat, '$sexo', '$fone', '$email', '$graduacao')");
-
-	echo $query;
-	header("Location:  ../../_visao/administrativo.php?link=6");
-
+	if (mysqli_query($conectar, "INSERT INTO professor (nome, matricula, data_nat, sexo, fone, email, graduacao) VALUES ('$nome', '$matricula', $data_nat, '$sexo', '$fone', '$email', '$graduacao')")){
+		header("Location:  ../../_visao/administrativo.php?link=6&cad=success");
+	}else{
+		header("Location:  ../../_visao/administrativo.php?link=6&cad=fail");
+	}
 }
 	
 

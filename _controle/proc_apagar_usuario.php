@@ -19,7 +19,7 @@ $resultado = mysqli_query($conectar, $query);
 		<?php
 		if (mysqli_affected_rows($conectar) != 0 ){	
 			echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/prof/_visao/administrativo.php?link=2'>
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=../_visao/administrativo.php?link=2'>
 				<script type=\"text/javascript\">
 					alert(\"Usuário apagado com Sucesso.\");
 				</script>
@@ -27,7 +27,7 @@ $resultado = mysqli_query($conectar, $query);
 		}
 		 else{ 	
 				echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/prof/_visao/administrativo.php?link=2'>
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=../_visao/administrativo.php?link=2'>
 				<script type=\"text/javascript\">
 					alert(\"Usuário não foi apagado com Sucesso.\");
 				</script>

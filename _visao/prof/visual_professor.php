@@ -6,7 +6,7 @@
 ?>
 <div class="container theme-showcase" role="main">      
 	<div class="page-header">
-		<h1>Visualizar Usuário</h1>
+		<h1>Visualizar Professores</h1>
 	</div>
 	
 	<div class="row">
@@ -15,7 +15,9 @@
 							
 			<a href='administrativo.php?link=9&id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 			
-			<a href='../_controle/proc_apagar_usuario.php?id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>
+			<a href='../_controle/proc_apagar_usuario.php?id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-danger' onClick="return confirm('Deseja realmente exluir o professor?')">Apagar</button></a>
+			
+							
 		</div>
 	</div>
 	

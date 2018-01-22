@@ -15,7 +15,20 @@
 							
 			<a href='administrativo.php?link=4&id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 			
-			<a href='../_controle/proc_apagar_usuario.php?id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>
+			<?php 
+				if ($_SESSION['usuarioId'] == $resultado['id']) {
+					
+			?>
+					<a href='#'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>
+			<?php 	} else {  ?>
+			 
+					<a href='../_controle/proc_apagar_usuario.php?id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-danger' onClick="return confirm('Deseja realmente exluir o usuário?')">Apagar</button></a>
+			<?php
+				
+			}
+
+			?>
+			
 		</div>
 	</div>
 	
@@ -46,14 +59,21 @@
 				<b>Usuário:</b>
 			</div>
 			<div class="col-sm-9 col-md-11">
-				<?php echo $resultado['login']; ?>
+				<?php echo $resultado['usuario']; ?>
 			</div>
 			
 			<div class="col-sm-3 col-md-1">
 				<b>Nivel de Acesso:</b>
 			</div>
 			<div class="col-sm-9 col-md-11">
-				<?php echo $resultado['nivel_acesso_id']; ?>
+				<?php 
+
+					if ($resultado['nivel_acesso_id'] == 1) {
+						echo "Administrador";
+					} else{
+						echo "Usuário Padrão";
+					}
+				 ?>
 			</div>
 		</div>
 	</div>
